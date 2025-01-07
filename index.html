@@ -189,6 +189,35 @@
             flex-direction: row-reverse;
             column-gap: 0.2rem;
          }
+         table.photos{
+            margin-top: 10px;
+            th{
+                background-color: #fff;
+            }
+        }
+        table.photos td{
+            display: flex;
+            justify-content: center;
+            width: 49%;
+
+        }
+        .papa{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+            table.photos .pop{
+                position: relative;
+                width: 100px;
+                height: 200px;
+                background-color: #0078D4;
+                display: flex ;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+            }
+         
         @media (min-width: 601px) and (max-width: 900px) {
     table {
         width: 100% !important; /* Ensure table spans full width */
@@ -451,18 +480,18 @@
                 <th colspan="6">The General Requirements (1)</th>
             </tr>
             <tr>
-                <td class="bg" colspan="3">يجب وضع نتيجة (نعم/لا/لاينطبق) فقط بعد الانتهاء من التفتيش</td>
-                <td class="bg" colspan="6">The result (Yes\No\N/A) should be placed only after completing the inspection</td>
+                <th class="bg" colspan="3">يجب وضع نتيجة (نعم/لا/لاينطبق) فقط بعد الانتهاء من التفتيش</th>
+                <th class="bg" colspan="6">The result (Yes\No\N/A) should be placed only after completing the inspection</th>
             </tr>
 
             <tr>
                 <th class="bg" colspan="3">
                     الوصف
                 </th>
-                    <td   class="bg mini">نعم<br>Yes</td>
-                    <td  class="bg mini">لا<br>NO</td>
-                    <td  class="bg mini">لاينطبق<br>N/A</td>
-                    <th  class="bg big">ملاحظة: يرجى تحديد البيانات الإيضاحية الموجودة <br>Note: Please Define the Information founded</th>
+                    <td   class="bg mini"> <strong>نعم<br>Yes</strong></td>
+                    <td  class="bg mini"> <strong>لا<br>NO</strong></td>
+                    <td  class="bg mini"> <strong>لاينطبق<br>N/A</strong></td>
+                    <th  class="bg big"> <strong>ملاحظة: يرجى تحديد البيانات الإيضاحية الموجودة<br>Note: Please Define the Information founded</strong></th>
             </tr>
 
             <tr>
@@ -2242,6 +2271,87 @@
                         <th>:Issue Date</th>
                     </tr>        
                 </table>
+                <table class="photos" >
+                    <tr>
+                        <th colspan="2">
+                            <strong>صور المفطورة</strong>
+                            <br>
+                            <strong>Trailer Pictures</strong>
+                        </th>
+                    </tr>
+                    <tr class="papa">
+                        <td style="text-align: center; padding: 10px;">
+                            <!-- Photo 1 -->
+                            <div class="pop">
+                                <img src="photos/photo1.jpg" alt="Photo 1" >
+                            </div>
+                        </td>
+                        <td style="text-align: center; padding: 10px;">
+                            <!-- Photo 2 -->
+                            <div class="pop">
+                                <img src="photos/photo2.jpg" alt="Photo 2" >
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="papa">
+                        <td style="text-align: center; padding: 10px;">
+                            <!-- Photo 3 -->
+                            <div class="pop">
+                                <img src="photos/photo3.jpg" alt="Photo 3" >
+                            </div>
+                        </td>
+                        <td style="text-align: center; padding: 10px;">
+                            <!-- Photo 4 -->
+                            <div class="pop">
+                                <img src="photos/photo4.jpg" alt="Photo 4" >
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="papa">
+                        <td style="text-align: center; padding: 10px;">
+                            <!-- Photo 5 -->
+                            <div class="pop">
+                                <img src="photos/photo5.jpg" alt="Photo 5" >
+                            </div>
+                        </td>
+                        <td style="text-align: center; padding: 10px;">
+                            <!-- Photo 6 -->
+                            <div class="pop">
+                                <img src="photos/photo6.jpg" alt="Photo 6" >
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="papa">
+                        <td style="text-align: center; padding: 10px;">
+                            <!-- Photo 7 -->
+                            <div class="pop">
+                                <img src="photos/photo7.jpg" alt="Photo 7" >
+                            </div>
+                        </td>
+                        <td style="text-align: center; padding: 10px;">
+                            <!-- Photo 8 -->
+                            <div class="pop">
+                                <img src="photos/photo8.jpg" alt="Photo 8" >
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table class="Date">
+                    <tr>
+                        <td>1/1</td>
+                        <th>:Issue No/Rev No</th>
+                        <td>09/11/2023</td>
+                        <th>:Rev Date</th>
+                    </tr>
+                    <tr>
+                        <td>Page <span class="bg">14</span> of <span class="bg">16</span></td>
+                        <th>:Page No</th>
+                        <td>11/04/2023</td>
+                        <th>:Issue Date</th>
+                    </tr>        
+                </table>
+
+                
 
 
     </div>
