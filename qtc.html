@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspection Report – Trailers and Semi-Trailers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        table th, table td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+            font-size: 12px;
+        }
+        table th {
+            background-color: #ccc;
+            font-weight: bold;
+            width: 20% !important;
+            max-width: 20% !important;
+        }
+        .header {
+            width: 80%;
+            margin: auto;
+            padding: 20px 0;
+            flex-direction: row-reverse;
+            border-bottom: 4px solid #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .text {
+            text-align: left;
+        }
+        .header .text h1 {
+            color: #0078D4;
+            font-size: 2rem;
+            margin: 0;
+        }
+        .header .text p {
+            margin: 5px 0;
+            font-size: 1.5rem;
+        }
+        .header .text p strong {
+            font-weight: bold;
+        }
+        .header .logo {
+            text-align: center;
+        }
+        .header .logo img {
+            width: 250px;
+        }
+        .divider {
+            border-top: 2px solid #000;
+            margin-top: 2px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 12px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+        table.first{
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+        .CHASISS td{
+            max-width: 10px;
+            width: 10px;
+        }
+        td.small{
+            width: 20% !important;
+        }
+        .parent{
+            width: 70%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .green-text {
+            color: green;
+            font-weight: bold;
+        }
+        .red-text {
+            color: red;
+            font-weight: bold;
+        }
+        .checkbox {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border: 1px solid #000;
+        }
+        .Weight{
+            width: 80%;
+        }
+        .twice{
+            display: flex;
+            justify-content: center;
+        }
+        .General td{
+            font-weight: 600;
+        }
+        .Date th{
+            background-color: #fff;
+        }
+        span.bg{
+            background-color: #b3b1b1;
+            padding: 2px;
+        }
+        table.DIMENSIONS .parent td.mini{
+            width: 20px !important;
+            display: flex;
+        }
+        table.DIMENSIONS .parent td.big{
+            width: 50% !important;
+        }
+        table.DIMENSIONS{
+            margin-top: 10px;
+        }
+        div.ar{
+            text-align: end;
+            padding-block: 0;
+            margin-block:0;
+
+        }
+        div.en{
+            text-align: start;
+            padding-block: 0;
+            margin-block:0;
+
+        }
+        div.head-ar,.body-ar{
+            display: flex;
+            justify-content: end;
+            flex-direction: row-reverse;
+            column-gap: 0.2rem;
+            padding: 0;
+            margin:0;
+
+        }
+        div.head-ar strong{
+        padding: 0;
+        margin: 0;
+        }
+        /* table.digit{
+            max-width: 80%;
+            min-width: 400px;
+        } */
+        @media (min-width: 601px) and (max-width: 900px) {
+    table {
+        width: 100% !important; /* Ensure table spans full width */
+        font-size: 12px; /* Slightly smaller font size for readability */
+    }
+
+    table th, table td {
+        padding: 6px; /* Reduce padding for better spacing */
+    }
+    .header{
+        width: 100% !important;
+    }
+
+    .header h1 {
+        font-size: 1rem; /* Adjust header font size */
+    }
+
+    .header p {
+        font-size: 0.8rem; /* Slightly smaller paragraph font size */
+    }
+
+    .header .logo img {
+        width: 100px; /* Scale down logo slightly */
+    }
+
+    .footer {
+        font-size: 11px; /* Adjust footer font size */
+    }
+
+    .checkbox {
+        width: 12px; /* Adjust checkbox size */
+        height: 12px;
+    }
+    .divider{
+        width: 100% !important;
+    }
+}
+
+        @media (max-width: 600px) {
+    table {
+        width: 100% !important;
+        font-size: 10px; /* Smaller font for better readability */
+    }
+
+    table th, table td {
+        padding: 4px; /* Reduce padding for smaller screens */
+    }
+
+    .header{
+        width: 100% !important;
+    }
+
+    .header h1 {
+        font-size: 1rem; /* Adjust header font size */
+    }
+
+    .header p {
+        font-size: 0.8rem; /* Slightly smaller paragraph font size */
+    }
+
+    .header .logo img {
+        width: 60px; /* Smaller logo size */
+    }
+
+    .footer {
+        font-size: 10px; /* Smaller footer text */
+    }
+    .divider{
+        width: 100% !important;
+    }
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="header">
+        <div class="text">
+            <h1>Quality Techno Certification (QTC)</h1>
+            <p><strong>Document Title:</strong> Inspection Report – Trailers and Semi-Trailers - SASO</p>
+            <p><strong>Document Code:</strong> QTC-F-7.4.37</p>
+        </div>
+        <div class="logo">
+            <img src="qtc.jpg" alt="QTC Logo">
+        </div>
+    </div>
+    <div class="divider"></div>
+
+
+        <table class="first ">
+            <tr>
+                <th colspan="1">رقم التقرير<br>Report No.</th>
+                <td colspan="2">QTC</td>
+            </tr>
+            <tr>
+                <th colspan="1">تاريخ التقرير<br>Report Date</th>
+                <td colspan="2">DD-MMM-YYYY</td>
+            </tr>
+            <tr>
+                <th colspan="1">أسم مركز الفحص<br>Inspection Center Name</th>
+                <td colspan="2">QUALITY TECHNO CERTIFICATION</td>
+            </tr>
+            <tr>
+                <th colspan="1">عنوان مركز الفحص<br>Inspection Center Address</th>
+                <td colspan="2">6201, Othman Bin Affan Road, An Narjis, 2828</td>
+            </tr>
+            <tr>
+                <th colspan="1">أسم العميل<br>Client Name</th>
+                <td colspan="2">---</td>
+            </tr>
+            <tr>
+                <th colspan="1">بلد المنشأ<br>Origin Country</th>
+                <td colspan="2">---</td>
+            </tr>
+            <tr>
+                <th colspan="1">وصف المنتج<br>Product Description</th>
+                <td colspan="2">---</td>
+            </tr>
+            <tr>
+                <th colspan="1">الموديل<br>Model</th>
+                <td colspan="2">---</td>
+            </tr>
+            <tr>
+                <th colspan="1">فئة المنتج<br>Type</th>
+                <td colspan="2">---</td>
+            </tr>
+            <tr>
+                <th colspan="1">العلامة التجارية<br>Brand/Trademark Name</th>
+                <td colspan="2">---</td>
+            </tr>
+            <tr>
+                <th colspan="1">سنة الصنع<br>Manufacture Date</th>
+                <td colspan="2">---</td>
+            </tr>
+            <table class="digit">
+                <tr>
+                    <th rowspan="2">رقم الهيكل<br>Chassis No. (VIN)</th>
+                    <td>17</td>
+                    <td>16</td>
+                    <td>15</td>
+                    <td>14</td>
+                    <td>13</td>
+                    <td>12</td>
+                    <td>11</td>
+                    <td>10</td>
+                    <td>9</td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <table >
+                <tr>
+                    <th rowspan="1">الأبعاد (متر)<br>Dimension (Meter)</th>
+                    <div class="parent">
+                        <td class="small" rowspan="1" >الطول<br>Length</td>
+                        <td></td>
+                        <td class="small" rowspan="1" >العرض<br>Width</td>
+                        <td></td>
+                        <td class="small" rowspan="1" >الارتفاع<br>Height</td>
+                        <td></td>
+                    </div>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th rowspan="1" >الوزن الأقصى على كل محور (كغ)<br>Max. Axle Weight (kg)</th>
+                        <td class="small" rowspan="1">محور 1<br>Axle 1</td>
+                        <td></td>
+                        <td class="small" rowspan="1">محور 2<br>Axle 2</td>
+                        <td></td>
+                        <td class="small" rowspan="1">محور 3<br>Axle 3</td>
+                        <td></td>
+                </tr>
+            </table>
+        </table>
+        <table class="Weight">
+            <tr>
+                <th>الوزن الكلي (كغ)<br>Gross Weight (kg)</th>
+                <td>---</td>
+            </tr>
+            <tr>
+                <th>اللائحة الفنية<br>Technical Regulation</th>
+                <td>MA-162-17-04-01<br>SASO-TR-Trailers and Semi-Trailers-Version 1-Amendment 1</td>
+            </tr>
+            <tr>
+                <th>المواصفات الفنية<br>Technical Standards</th>
+                <td>SASO 2910:2022</td>
+            </tr>
+            <tr>
+                <th>تاريخ التفتيش<br>Inspection Date</th>
+                <td>DD-MMM-YYYY</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th rowspan="2">نتيجة التفتيش<br>Inspection Result</th>
+                <td >
+                    <input type="checkbox" class="checkbox"></input>
+                </td>
+                <td><span class="green-text">Compliance to Requirements</span><br>مطابق للمتطلبات</td>
+            </tr>
+            <tr>
+                <td >
+                    <input type="checkbox" class="checkbox"></input>
+                </td>
+                <td><span class="red-text">Non-Compliance to Requirements</span><br>غير مطابق للمتطلبات</td>
+
+            </tr>
+        </table>
+        <table class="General">
+            <thead>
+                <tr>
+                    <th colspan="2">المتطلبات العامة:</th>
+                    <th colspan="4">The General Requirements (1)</th>
+                </tr>
+                <tr>
+                    <td colspan="2">يجب وضع نتيجة (نعم/لا/لاينطبق) فقط بعد الانتهاء من التفتيش</td>
+                    <td colspan="4">The result (Yes\No\N/A) should be placed only after completing the inspection</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>الوصف</th>
+                    <th>نعم<br>Yes</th>
+                    <th>لا<br>NO</th>
+                    <th>لاينطبق<br>N/A</th>
+                    <th>ملاحظة: يرجى تحديد البيانات الإيضاحية الموجودة <br>Note: Please Define the Information founded</th>
+                </tr>
+            </tbody>
+        </table>
+        <table class="Date">
+            <tr>
+                <td>1/1</td>
+                <th>:Issue No/Rev No</th>
+                <td>09/11/2023</td>
+                <th>:Rev Date</th>
+            </tr>
+            <tr>
+                <td>Page <span class="bg">1</span> of <span class="bg">20</span></td>
+                <th>:Page No</th>
+                <td>11/04/2023</td>
+                <th>:Issue Date</th>
+            </tr>        
+        </table>
+        <table  class="DIMENSIONS">
+            <tr >
+                <th style="border-left: none;"  ></th>
+                <th style="border-inline: none;"  ></th>
+                <th style="border-left: none;"  ></th>
+                <td  colspan="1" ></td>
+                <td  colspan="1" ></td>
+                <td colspan="1" ></td>
+                <th colspan="8" >founded</th>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <div class="ar">
+                        <div class="head-ar">
+                            <strong>-4</strong>
+                            <strong>الابعاد</strong>
+                        </div>
+                        4.2 يجب ألا تبرز أي من النوافذ المفتوحة للخارج أو أجهزة التهوية والمرايا الجانبية بأكثر من 300 مم إلى الخارج من أقصى نقطة خارجية على كلا الجانبين<br>
+                        * في حالة وجود مرايا خلفية مثبتة بجرار يسحب مقطورة يزيد عرضها عن عرض الجرار، قد يسمح بروز هذه المرايا التي لا تتجاوز 300 مم لتشكل أقصى نقطة خارجية على جانبي المقطورة.
+                    </div>
+                    <div class="en">
+                        <strong>-DIMENSIONS 4</strong><br>
+                        4.2 None of the outward-opening windows or ventilators and wing mirrors shall protrude by more than 300 mm outward from the outermost point on both sides<br>
+                        * In the case of rear-wing mirrors attached to a tractor towing a trailer with a width exceeding that of the tractor, a protrusion of these mirrors not exceeding 300 mm from the outermost point on both sides of the trailer may be allowed.    
+                    </div>
+                </th>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="big"></td>
+            </tr>
+            <tr >
+                <th colspan="3"  >
+                    <div class="ar">
+                        <div class="head-ar">
+                            <span>4.3</span>
+                            <span> ،يجب أن يكون طول السيارة هو المسافة بين مستويين عموديتين متعامدين مع المستوى المتوسط ​​الطولي وملامسة مقدمة السيارة ومؤخرتها على التوالي  </span>
+                        </div>
+                        <span> ولا تزيد عن 20 مترًا للشاحنات والمقطورات و 23 مترًا للجرارات وشبه المقطورات ، 25.25 م للمركبات بمقطورات مزدوجة</span>
+                    </div>
+                    <br>
+                    <div class="en">
+                        4.3 The vehicle length shall be the distance between two vertical planes perpendicular to the longitudinal median plane and touching the front and rear of the vehicle respectively and it shall not exceed 20m for trucks and trailers, 23m for tractor and semi-trailers, 25.25m for Double Trailer Truck.                
+                    </div>
+                </th>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td colspan="6" class="big"></td>
+            </tr>
+            <tr >
+                <th colspan="3">
+                    <div class="ar">
+                        <div class="head-ar">
+                            <span>4.4</span>
+                            <span>يجب ان تكون عرض المركبة هي المسافة بين المستويين الرئيسين المتعامدين على المستوى المتوسط الافقي وتلامس من كلا الجانبين المستوى الجانبي ويجب</span>
+                        </div>
+                        <span>الا تزيد عن 2.6</span>
+                    </div>
+                    <br>
+                    <div class="en">
+                        4.4 The vehicle width shall be the distance between two planes parallel to the longitudinal median plane and touching the vehicle on either side of the said plane and it shall not exceed 2.6m.
+                    </div>
+                </th>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td colspan="6" class="big"></td>
+            </tr>
+            <tr >
+                <th colspan="3"  >
+                    <div class="ar">
+                        <div class="head-ar">
+                            <span>4.5</span>
+                            <span>يجب ان تكون ارتفاع المركبة هي المسافة بين أسطح الدعم و المستوى الافقي ملامس اعلى جزء من المركبة و يجب ان لا تزيد عن 4.5  م</span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="en">
+                        4.5 The height of the vehicle shall be the distance between the supporting surfaces and the horizontal plane touching the topmost part of the vehicle and it shall not exceed 4.5 m.
+                    </div>
+                </th>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td colspan="6" class="big"></td>
+            </tr>
+            <tr >
+                <th colspan="3" >
+                    <div class="ar">
+                        <div class="head-ar">
+                            <span>-5</span>
+                            <span>الحد الادنى لخلوص الطريق</span>
+                        </div>
+                        <div class="body-ar">
+                            <span>5.1</span>
+                            <span>يجب أن يكون أي جزء غير الأجزاء الملامسة للأرض في السيارة ذات خلوص كافٍ فوق سطح الأرض لضمان القيادة الآمنة </span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="en">
+                        5- MINIMUM ROAD CLEARANCE <br>
+                        5.1 Any part other than the earth-touching parts of a motor vehicle shall have adequate clearance above the ground so as to ensure safe driving.
+                    </div>
+                </th>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td colspan="6" class="big"></td>
+            </tr>
+            <tr >
+                <th colspan="3" >
+                    <div class="ar">
+                        <div class="head-ar">
+                            <span>5.2</span>
+                            <span>يجب أن يكون الخلوص بحيث لا يجب أن تلمس أي أجزاء صلبة من السيارة مستوى الأرض وتتلف بسبب الاصطدام </span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="en">
+                        5.2 The clearance shall be such that any rigid parts of the vehicle should not touch the level ground and get damaged due to impact.                    </div>
+                </th>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td colspan="6" class="big"></td>
+            </tr>
+
+        </table>
+        <table class="Date">
+            <tr>
+                <td>1/1</td>
+                <th>:Issue No/Rev No</th>
+                <td>09/11/2023</td>
+                <th>:Rev Date</th>
+            </tr>
+            <tr>
+                <td>Page <span class="bg">2</span> of <span class="bg">20</span></td>
+                <th>:Page No</th>
+                <td>11/04/2023</td>
+                <th>:Issue Date</th>
+            </tr>        
+        </table>
+
+        <table  class="">
+            <tr style="border: none;">
+                <th style="border: none;background-color: #fff;"  ></th>
+                <th style="border: none;background-color: #fff;"  ></th>
+                <th style="border: none;background-color: #fff;"  ></th>
+                <td style="border: none;" colspan="1" ></td>
+                <td style="border: none;" colspan="1" ></td>
+                <td style="border: none;" colspan="1" ></td>
+                <th style="border: none;background-color: #fff;" colspan="8" ></th>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <div class="ar">
+                        <div class="head-ar">
+                            <strong>5.3</strong>
+                            <strong>طبقا لقيود التصميم فيجب ان تأمن الاجزاء البارزة لتجنب تأثير الاجزاء الصلبة لأسباب السلامة</strong>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="en">
+                        5.3 Due to design constriction any projecting parts should be provided with guards to avoid the rigid part being affected for safety reasons.                    </div>
+                </th>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="big"></td>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <div class="ar">
+                        <div class="head-ar">
+                            <strong>-6</strong>
+                            <strong> الوزن المحوري والاجمالي للمركبة</strong>
+                        </div>
+                        <div class="body-ar">
+                            <span>6.1</span>
+                            <span>
+                                "يجب أن يكون الوزن الإجمالي للمركبة أقل من أو يساوي مجموع سعة المحاور القصوى. يجب ألا يتجاوز الوزن الإجمالي للشاحنه" الباص" شاحنه ومقطوره" 
+                            </span>
+                        </div>
+                        الجرار مع نصف المقطوره عن  45 طنًا وبالنسبه للشاحنه بمقطوره مزدوجه عن 60 طن
+                    </div>
+                    <br>
+                    <div class="en">
+                        5.3 Due to design constriction any projecting parts should be provided with guards to avoid the rigid part being affected for safety reasons.                    </div>
+                </th>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="mini"><input type="checkbox"></td>
+                    <td  class="big"></td>
+            </tr>
+            
+            </table>
+        <div class="footer">
+            <p>Rev Date: 09/11/2023 | Issue No/Rev No: 1/1 | Issue Date: 11/04/2023 | Page No: 1 of 16</p>
+        </div>
+    </div>
+</body>
+</html>
