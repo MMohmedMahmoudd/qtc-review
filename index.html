@@ -23,7 +23,7 @@
             margin-right: auto;
         }
         table th, table td {
-            border: 1px solid #000;
+            border: double;
             padding: 8px;
             text-align: center;
             font-size: 12px;
@@ -33,6 +33,9 @@
             font-weight: bold;
             width: 20% !important;
             max-width: 20% !important;
+        }
+        .bg{
+            background-color: #ccc !important;
         }
         .header {
             width: 80%;
@@ -119,6 +122,9 @@
             display: flex;
             justify-content: center;
         }
+        .General{
+            margin-top: 10px;
+        }
         .General td{
             font-weight: 600;
         }
@@ -129,15 +135,15 @@
             background-color: #b3b1b1;
             padding: 2px;
         }
+        table.DIMENSIONS{
+            margin-top: 0;
+        }
         table.DIMENSIONS .parent td.mini{
             width: 20px !important;
             display: flex;
         }
         table.DIMENSIONS .parent td.big{
             width: 50% !important;
-        }
-        table.DIMENSIONS{
-            margin-top: 10px;
         }
         table.DIMENSIONS,table.VEHICLE{
             th{
@@ -417,27 +423,6 @@
 
             </tr>
         </table>
-        <table class="General">
-            <thead>
-                <tr>
-                    <th colspan="2">المتطلبات العامة:</th>
-                    <th colspan="4">The General Requirements (1)</th>
-                </tr>
-                <tr>
-                    <td colspan="2">يجب وضع نتيجة (نعم/لا/لاينطبق) فقط بعد الانتهاء من التفتيش</td>
-                    <td colspan="4">The result (Yes\No\N/A) should be placed only after completing the inspection</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>الوصف</th>
-                    <th>نعم<br>Yes</th>
-                    <th>لا<br>NO</th>
-                    <th>لاينطبق<br>N/A</th>
-                    <th>ملاحظة: يرجى تحديد البيانات الإيضاحية الموجودة <br>Note: Please Define the Information founded</th>
-                </tr>
-            </tbody>
-        </table>
         <table class="Date">
             <tr>
                 <td>1/1</td>
@@ -452,16 +437,36 @@
                 <th>:Issue Date</th>
             </tr>        
         </table>
+
         <table  class="DIMENSIONS">
-            <tr >
-                <th style="border-left: none;"  ></th>
-                <th style="border-inline: none;"  ></th>
-                <th style="border-right: none;"  ></th>
-                <td  colspan="1" ></td>
-                <td  colspan="1" ></td>
-                <td colspan="1" ></td>
-                <th colspan="8" >founded</th>
+            <tr style="border: none;">
+                <th style="border: none;background-color: #fff;"  ></th>
+                <th style="border: none;background-color: #fff;"  ></th>
+                <th style="border: none;background-color: #fff;"  ></th>
+                <td style="border: none;" colspan="1" ></td>
+                <td style="border: none;" colspan="1" ></td>
+                <td style="border: none;" colspan="1" ></td>
+                <th style="border: none;background-color: #fff;" colspan="8" ></th>
             </tr>
+            <tr>
+                <th colspan="3">المتطلبات العامة:</th>
+                <th colspan="6">The General Requirements (1)</th>
+            </tr>
+            <tr>
+                <td class="bg" colspan="3">يجب وضع نتيجة (نعم/لا/لاينطبق) فقط بعد الانتهاء من التفتيش</td>
+                <td class="bg" colspan="6">The result (Yes\No\N/A) should be placed only after completing the inspection</td>
+            </tr>
+
+            <tr>
+                <th class="bg" colspan="3">
+                    الوصف
+                </th>
+                    <td   class="bg mini">نعم<br>Yes</td>
+                    <td  class="bg mini">لا<br>NO</td>
+                    <td  class="bg mini">لاينطبق<br>N/A</td>
+                    <th  class="bg big">ملاحظة: يرجى تحديد البيانات الإيضاحية الموجودة <br>Note: Please Define the Information founded</th>
+            </tr>
+
             <tr>
                 <th colspan="3">
                     <div class="ar">
@@ -872,8 +877,9 @@
                         <div class="en">
                             <div class="body-en">
                                 <span>8.5</span>
-                                <span>Electrical parts should be provided with a protection enclosure against access external influences, foreign objects and/or water.</span>
+                                <span>Electrical parts should be provided with a protection enclosure against access external influences, foreign </span>
                             </div>
+                            .objects and/or water
                         </div>
                     </th>
                     <td class="mini"><input type="checkbox"></td>
@@ -893,8 +899,9 @@
                         <div class="en">
                             <div class="body-en">
                                 <span>8.7</span>
-                                <span>The battery terminals shall be electrically insulated or covered by the insulating battery box cover. They shall be fitted in a vented box.</span>
+                                <span>The battery terminals shall be electrically insulated or covered by the insulating battery box cover. They </span>
                             </div>
+                            .shall be fitted in a vented box
                         </div>
                     </th>
                     <td class="mini"><input type="checkbox"></td>
@@ -943,8 +950,9 @@
                             </div>
                             <div class="body-en">
                                 <span>9.1</span>
-                                <span>The braking system provided to the trailer shall be suitable to the vehicle concern and ensure safe braking performance under normal and emergency conditions.</span>
+                                <span>The braking system provided to the trailer shall be suitable to the vehicle concern and ensure safe braking </span>
                             </div>
+                            .performance under normal and emergency conditions
                         </div>
                     </th>
                     <td class="mini"><input type="checkbox"></td>
@@ -964,8 +972,9 @@
                         <div class="en">
                             <div class="body-en">
                                 <span>9.4</span>
-                                <span>No material affecting the public health, directly or after reaction with other components such as asbestos and cadmium, shall be used in the brake system.</span>
+                                <span>No material affecting the public health, directly or after reaction with other components such as asbestos </span>
                             </div>
+                            .and cadmium, shall be used in the brake system
                         </div>
                     </th>
                     <td class="mini"><input type="checkbox"></td>
@@ -985,8 +994,9 @@
                         <div class="en">
                             <div class="body-en">
                                 <span>9.6</span>
-                                <span>Brake pipes shall be so attached to the chassis or equivalent that they are not unnecessarily subjected to damage through vibration or abrasion and shall be made of materials resistant to corrosion or treated by any process which ensures such resistance.</span>
+                                <span>Brake pipes shall be so attached to the chassis or equivalent that they are not unnecessarily subjected to </span>
                             </div>
+                            damage through vibration or abrasion and shall be made of materials resistant to corrosion or treated by any process which ensures such resistance.
                         </div>
                     </th>
                     <td class="mini"><input type="checkbox"></td>
@@ -1003,7 +1013,7 @@
                     <th>:Rev Date</th>
                 </tr>
                 <tr>
-                    <td>Page <span class="bg">3</span> of <span class="bg">20</span></td>
+                    <td>Page <span class="bg">4</span> of <span class="bg">20</span></td>
                     <th>:Page No</th>
                     <td>11/04/2023</td>
                     <th>:Issue Date</th>
@@ -1139,6 +1149,21 @@
                     <td class="big"></td>
                 </tr>
             </table>
+            <table class="Date">
+                <tr>
+                    <td>1/1</td>
+                    <th>:Issue No/Rev No</th>
+                    <td>09/11/2023</td>
+                    <th>:Rev Date</th>
+                </tr>
+                <tr>
+                    <td>Page <span class="bg">5</span> of <span class="bg">20</span></td>
+                    <th>:Page No</th>
+                    <td>11/04/2023</td>
+                    <th>:Issue Date</th>
+                </tr>        
+            </table>
+    
             
     </div>
 </body>
